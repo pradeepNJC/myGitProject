@@ -3,11 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.mycompany</groupId>
-	<artifactId>my-cicd-project</artifactId>
+	<artifactId>myFirstCICDProject</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>mule-application</packaging>
 
-	<name>my-cicd-project</name>
+	<name>myFirstCICDProject</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -30,25 +30,24 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-    					<cloudHubDeployment>
-     	 					<uri>https://anypoint.mulesoft.com</uri>
-      						<muleVersion>${mule.version}</muleVersion>
-      						<!-- deploy user parameter -->
-      						<username>${anypoint.username}</username>
-      						<password>${anypoint.password}</password>
-      						
-      						<environment>${env}</environment>
-      						<applicationName>${appname}</applicationName>
-      						<businessGroup>${business}</businessGroup>
-      						<workerType>${vcore}</workerType>
-      						<workers>${workers}</workers>
-      						<objectStoreV2>true</objectStoreV2>
-      						<!--region>${region}</region-->
-      						<!--connectedAppClientId>YOURCLIENTID</connectedAppClientId-->
-      						<!--connectedAppClientSecret>YOURCLIENTSECRET</connectedAppClientSecret-->
-      						<!--connectedAppGrantType>client_credentials</connectedAppGrantType-->
-   					 </cloudHubDeployment>
-  				</configuration>	
+					<cloudHubDeployment>
+						<uri>https://anypoint.mulesoft.com</uri>
+						<muleVersion>${mule.version}</muleVersion>
+						<!-- deploy user parameter -->
+						<username>${anypoint.username}</username>
+						<password>${anypoint.password}</password>
+						<environment>${env}</environment>
+						<applicationName>${appname}</applicationName>
+						<businessGroup>${business}</businessGroup>
+						<workerType>${vcore}</workerType>
+						<workers>${workers}</workers>
+						<objectStoreV2>true</objectStoreV2>
+						<!--region>${region}</region-->
+						<!--connectedAppClientId>YOURCLIENTID</connectedAppClientId-->
+						<!--connectedAppClientSecret>YOURCLIENTSECRET</connectedAppClientSecret-->
+						<!--connectedAppGrantType>client_credentials</connectedAppGrantType-->
+					</cloudHubDeployment>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
